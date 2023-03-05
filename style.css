@@ -17,6 +17,11 @@
     font-family: 'Roboto Mono', monospace;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 /* ---------------Nav Bar---------------*/
 .container-nav nav {
     background-color: rgba(0, 0, 0, 0.25);
@@ -85,11 +90,130 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--color1);
+    background-image: url(img/pexels-frank-cone-3607542.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .home h1 {
     color: #fff;
+    font-size: 40px;
 }
+
 .home p {
     color: #fff;
+    font-size: 18px;
+}
+
+.div-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: -40px auto;
+    height: 100vh;
+}
+
+.left-div {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.right-div img {
+    flex: 1;
+    border-radius: 50%;
+    max-width: 350px;
+    overflow: hidden;
+}
+
+.home img {
+    display: block;
+    width: 100%;
+    /* set the width of the image to 100% */
+    transition: transform 0.3s ease;
+    /* add transition effect */
+}
+
+.home img:hover {
+    transform: scale(1.1);
+    /* zoom in on hover */
+}
+
+/* ---------------Collection Section---------------*/
+
+.collection {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color1);
+}
+
+.collection h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+
+.grid-collection {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.grid-collection img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    width: 100%;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    transform-origin: center bottom;
+}
+
+.grid-collection img:hover {
+    transform: scale(1.1);
+}
+
+.swiper-button-next {
+    margin-right: 8px;
+}
+
+.swiper-button-prev {
+    margin-left: -8px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}
+
+.grid-collection img:first-child,
+.grid-collection img:nth-child(2),
+.grid-collection img:nth-child(3),
+.grid-collection img:nth-child(4),
+.grid-collection img:nth-child(5) {
+    margin-top: 30px;
+    /* Add some extra margin to the top of the images in the first row */
 }
