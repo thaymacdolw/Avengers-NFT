@@ -12,7 +12,7 @@
 :root {
     --color1: #1E1629;
     --color2: #7b287d;
-    --color3: #7c287d8c;
+    --color3: #7c287d3a;
     --font-color: #fff;
     font-family: 'Roboto Mono', monospace;
 }
@@ -85,4 +85,11 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--color1);
+}
+
+.home h1 {
+    color: #fff;
+}
+.home p {
+    color: #fff;
 }
